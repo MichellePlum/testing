@@ -1,0 +1,161 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} */
+
+body{
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style: none;
+    line-height: 4;
+}
+
+.nav-links a {
+    color: #ffffffe0;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+}
+
+.nav-links a:hover {
+    color: rgb(212, 173, 45);
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff7f7;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav-links {
+        overflow: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        background-color: #000000ee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 1s;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-40deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    transform: rotate(90deg) translate(0px, 0px);
+}
+
+.toggle .line3 {
+    transform: rotate(35deg) translate(-5px, -6px);
+}
+
+
+.main-video {
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.main-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.title{
+   margin-top: 30px;
+   text-align: center;
+   color: white;
+}
+
+.text{
+    background-color:#4c4e50;
+    width: 1000px;
+    display: flex;
+    padding: 20px;
+}
+
+
+
+.textbox{
+margin-top: 30px;
+display: flex;
+justify-content: center;
+}
